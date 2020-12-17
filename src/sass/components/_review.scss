@@ -1,0 +1,36 @@
+// reviews
+
+.reviews__box {
+
+    &-img {
+        margin-bottom: 28px;
+    }
+
+    &-stars {
+        margin-bottom: 18px;
+    }
+
+    &-star {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-text {
+        font-size: 16px;
+        line-height: 26px;
+        padding-right: 31px;
+        .show_more {
+            display: block;
+            font-size: 16px;
+            line-height: 40px;
+            color: $red;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+}

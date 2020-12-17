@@ -1,0 +1,39 @@
+// colections
+
+.collection_card {
+    display: block;
+    margin-bottom: 16px;
+    overflow: hidden; 
+    position: relative;
+    img {
+        transition: all 0.5s;
+        display: block;
+        overflow: hidden;
+        &:hover {
+            transform: scale(1.14);
+        }
+    }
+    &--small {
+        .collection_card__title {
+            font-size: 24px;
+            line-height: 29px;
+            bottom: 24px;
+        }
+    }
+}
+
+.collection_card__title {
+    display: block;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 41px;
+    text-decoration-line: underline;
+    color: #fff;
+    padding: 0 28px;
+    width: 100%;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+}
+

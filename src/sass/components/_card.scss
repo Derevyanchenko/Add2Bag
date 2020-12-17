@@ -1,0 +1,33 @@
+// card
+
+.card__box {
+    margin-bottom: 88px;
+    &-img {
+        height: 182px;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &-title {
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 6px;
+        margin-bottom: 28px;
+    }
+
+    &-btns {
+
+    }
+
+    &-btn {
+        margin-right: 18px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
