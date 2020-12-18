@@ -3,15 +3,15 @@
 .reviews__box {
 
     &-img {
-        margin-bottom: 28px;
+        margin-bottom: 32px;
     }
 
     &-stars {
-        margin-bottom: 18px;
+        margin-bottom: 20px;
     }
 
     &-star {
-        margin-right: 10px;
+        margin-right: 14px;
         &:last-child {
             margin-right: 0;
         }
@@ -19,12 +19,12 @@
 
     &-text {
         font-size: 16px;
-        line-height: 26px;
+        line-height: 27px;
         padding-right: 31px;
         .show_more {
             display: block;
             font-size: 16px;
-            line-height: 40px;
+            line-height: 47px;
             color: $red;
             text-decoration: underline;
             &:hover {

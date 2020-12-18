@@ -3,7 +3,7 @@
   .faq__item {
     background: $grey;
     margin-bottom: 8px;
-    padding: 32px 26px;
+    padding: 34px 26px;
   }
   
   .faq__item-top {
@@ -39,13 +39,18 @@
   
   .faq__submnenu {
     display: none;
-    margin-top: 16px;
+    margin-top: 20px;
   }
   
   .faq__submnenu p {
     font-size: 16px;
     line-height: 26px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
+  }
+
+  .faq__submnenu i {
+    font-size: 14px;
+    line-height: 19px;
   }
   
 //   =====================================================

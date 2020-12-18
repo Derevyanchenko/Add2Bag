@@ -74,3 +74,144 @@
     }
 
 }
+
+// ====================================================================================
+
+// header submenu
+
+.header .col-lg-12 {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    background-color: #fff;
+    padding: 24px 0;
+    left: 0;
+    top: 108px;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+    &__container {
+
+    }
+
+    .items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item {
+        // display: inline-block;
+        color: white;
+        // padding-right: 50px;
+        // vertical-align: top;
+        // min-width: 260px;
+        padding-right: 35px;
+
+        &:first-child {
+            max-width: 380px;
+            width: 100%;
+        }
+        &:nth-child(2) {
+            max-width: 360px;
+            width: 100%;
+        }
+        &:nth-child(3) {
+            max-width: 280px;
+            width: 100%;
+        }
+        &:last-child {
+            max-width: 250px;
+            width: 100%;
+            padding-right: 0;
+        }
+
+        // mods
+
+        &__noTitle {
+            padding-top: 35px;
+        }
+
+        &__models {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    margin-right: 22px;
+                }
+            }
+        }
+
+        // content
+
+        &__title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 35px;
+            color: $black;
+            margin-bottom: 0;
+        }
+        .list {
+
+            li.bold {
+                a {
+                    font-weight: bold;
+                }
+            }
+
+            li {
+                padding-bottom: 1px;
+                a {
+                    font-size: 18px;
+                    line-height: 37px;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $red !important;
+                        text-decoration: none !important;
+                        transition: all 0.3s;
+                    }
+                }
+                a.color_red {
+                    color: $red !important;
+                    text-decoration: none !important;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.submenu__bottom {
+    margin-top: 16px;
+    &-title {
+        font-size: 14px;
+        line-height: 36px;
+        color: #969696;
+        margin-bottom: 0;
+        
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            margin-right: 32px;
+            a {
+                font-size: 16px;
+                line-height: 36px;
+                color:  $black;
+                transition: all 0.3s;
+                &:hover {
+                    color: $red !important;
+                    text-decoration: none !important;
+                    transition: all 0.3s;
+                }
+            }
+        } 
+    }
+
+}

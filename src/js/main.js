@@ -1,12 +1,85 @@
+
+    $(document).mouseover(function (event) {
+
+        let target = event.target;
+
+         if( !target.classList.contains("header") && $(".header").has(target).length === 0 && !target.classList.contains("submenu") && $(".submenu").has(target).length === 0 ) {
+            $(".submenu").hide();
+            console.log("hide");
+        }
+
+    });
+
+    $(window).on("load resize", function() {
+
+        if( $(window).width() >= 991 ) {
+
+            // submenu on the desctop
+
+            $(".nav_left .nav-item").hover(function(e) {
+
+                e.preventDefault();
+
+                let dataIndex = $(this).data("index"),
+                    dataIndexInt  = parseInt(dataIndex);
+                    submenu  = $(".submenu");
+
+                    $(".submenu").hide();
+                    $(".submenu[data-sub='"+dataIndexInt+"']").show();
+            });
+      
+        } else if( $(window).width() < 991 ) {
+
+            // submenu on the mobile
+
+            $(".nav_left .nav-item").click(function(e) {
+
+                let dataIndex = $(this).data("index"),
+                    dataIndexInt  = parseInt(dataIndex);
+                    submenu  = $(".submenu");
+
+                    $(".submenu").hide();
+                    $(".submenu[data-sub='"+dataIndexInt+"']").show();
+                    $("body, html").css("overflow-y", "hidden");
+            });
+
+                // burger close
+
+            $(document).mouseup(function (event) {
+                if ($(".submenu__modal").is(":visible")) {
+                    var popup = $(".submenu__modal");
+                    if (!popup.is(event.target) && popup.has(event.target).length === 0) {
+                        $(".submenu__modal-overlay").removeClass("open");
+                        $("body, html").css("overflow-y", "");
+                    }
+                }
+            });
+
+        }
+      
+      });
+
 $(document).ready(function() {
 
-  // open mob menu
+    // close submenu
 
-    $(".header__toggle").on("click", function(e) {
-        e.preventDefault();
-        $(".header-mob").slideToggle();
-        $(this).toggleClass("header__toggle--active");
-    });
+
+    // $(".submenu").mouseleave(function (event) {
+    //     $(".submenu").hide();
+    // });
+    
+
+ 
+  // burger
+
+  $(".open-menu-js").on("click", function() {
+
+    $(".submenu__modal-overlay").addClass("open");
+    $(".submenu[data-sub='"+ 1 +"']").show();
+    $("body, html").css("overflow-y", "hidden");
+
+  });
+
 
     // faq
     
