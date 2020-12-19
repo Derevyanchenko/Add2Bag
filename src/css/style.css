@@ -1909,3 +1909,7 @@ h1 {
     margin-bottom: 14px;
   }
 }
+
+.nav-link.active {
+  color: #D20B16 !important;
+}

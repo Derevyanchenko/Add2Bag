@@ -34,11 +34,15 @@
 
             $(".nav_left .nav-item").click(function(e) {
 
+                e.preventDefault();
+
+                console.log("click");
+
                 let dataIndex = $(this).data("index"),
                     dataIndexInt  = parseInt(dataIndex);
                     submenu  = $(".submenu");
 
-                    $(".nav-item").AddClass("active");
+                    $(".nav-item").removeClass("active");
                     $(".submenu").hide();
 
 
