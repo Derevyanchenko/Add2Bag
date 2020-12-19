@@ -70,41 +70,66 @@ $(document).ready(function() {
     $(".nav_right, .cart_and_search").hover(function() {
         $(".submenu").hide();
         console.log()
-      });
+    });
     
+    // search
 
+    $(".search__icon").on("click", function() {
+
+        let field = $(".search__field"),
+            that  = $(this);
+
+        if( field.is(":visible") ) {
+
+            that.removeClass("active");
+            field.hide();
+
+        } else {
+
+            that.addClass("active");
+            field.show();
+
+        }
+
+    });
  
-  // burger
+    // burger
 
-  $(".open-menu-js").on("click", function() {
-
-    $(".submenu__modal-overlay").addClass("open");
-    $(".nav-item[data-index='"+ 1 +"']").addClass("active");
-    $(".submenu[data-sub='"+ 1 +"']").show();
-    $("body, html").css("overflow-y", "hidden");
-
-  });
+    $(".open-menu-js").on("click", function() {
+  
+      $(".submenu__modal-overlay").addClass("open");
+      $(".nav-item[data-index='"+ 1 +"']").addClass("active");
+      $(".submenu[data-sub='"+ 1 +"']").show();
+      $("body, html").css("overflow-y", "hidden");
+  
+    });
 
 
     // faq
     
-    $(".faq__item-top").on("click", function() {
+    $(".faq__item").on("click", function(e) {
 
-      let
-          that = $(this),
-          submenu = $(".faq__submnenu"),
-          that_submenu = that.siblings(submenu);
 
-      if ( that_submenu.is(":visible") ) {
-          $(".faq__item-top").removeClass("active");
-          submenu.slideUp(300)
-      } else {
-          $(".faq__item-top").removeClass("active");
-          that.addClass("active");
-          submenu.slideUp(300)
-          that.siblings(submenu).slideDown(300);
-      }
-
-  });
+        let
+            that = $(this),
+            submenu = $(".faq__submnenu"),
+            that_submenu = that.find(submenu);
+    
+        if ( that_submenu.is(":visible") ) {
+            $(".faq__item-top").removeClass("active");
+            $(".faq__item").removeClass("open");
+            that.removeClass("open");
+            submenu.slideUp(300)
+        } else {
+            $(".faq__item-top").removeClass("active");
+            $(".faq__item").removeClass("open");
+            that.addClass("open");
+            that.find(".faq__item-top").addClass("active");
+            submenu.slideUp(300)
+            that.find(submenu).slideDown(300);
+        }
+    
+    
+    });
 
 });
