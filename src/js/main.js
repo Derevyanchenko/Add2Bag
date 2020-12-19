@@ -38,7 +38,11 @@
                     dataIndexInt  = parseInt(dataIndex);
                     submenu  = $(".submenu");
 
+                    $(".nav-item").AddClass("active");
                     $(".submenu").hide();
+
+
+                    $(".nav-item[data-index='"+ dataIndexInt +"']").addClass("active");
                     $(".submenu[data-sub='"+dataIndexInt+"']").show();
                     $("body, html").css("overflow-y", "hidden");
             });
@@ -63,10 +67,10 @@ $(document).ready(function() {
 
     // close submenu
 
-
-    // $(".submenu").mouseleave(function (event) {
-    //     $(".submenu").hide();
-    // });
+    $(".nav_right, .cart_and_search").hover(function() {
+        $(".submenu").hide();
+        console.log()
+      });
     
 
  
@@ -75,6 +79,7 @@ $(document).ready(function() {
   $(".open-menu-js").on("click", function() {
 
     $(".submenu__modal-overlay").addClass("open");
+    $(".nav-item[data-index='"+ 1 +"']").addClass("active");
     $(".submenu[data-sub='"+ 1 +"']").show();
     $("body, html").css("overflow-y", "hidden");
 
